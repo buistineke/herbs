@@ -22,9 +22,8 @@
 			}
 
 			li {
-
-				&:hover > ul,
-				&.focus > ul {
+				&.focus > ul,
+				&:hover > ul {
 					display: block;
 					left: auto;
 				}
@@ -34,17 +33,15 @@
 				width: 200px;
 			}
 
-			:hover > a,
-			.focus > a {
-			}
+			.focus > a,
+			:hover > a {}
 
-			a:hover,
-			a.focus {
-			}
+			a.focus,
+			a:hover {}
 		}
 
-		li:hover > ul,
-		li.focus > ul {
+		li.focus > ul,
+		li:hover > ul {
 			left: auto;
 		}
 	}
@@ -52,31 +49,32 @@
 	li {
 		position: relative;
 
-		&:hover > a,
-		&.focus > a {
-		}
+		&.focus > a,
+		&:hover > a {}
 	}
 
 	a {
 		display: block;
 		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 0.75rem;
+		color: $primary-light;
+		font-weight: 600;
+		letter-spacing: 0.15em;
+		margin-left: 1em;
 	}
 
-	.current_page_item > a,
+	.current-menu-ancestor > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a,
-	.current-menu-ancestor > a {
-	}
+	.current_page_item > a {}
 }
-
 /* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
+.main-navigation.toggled ul,
+.menu-toggle {
 	display: block;
 }
-
 @media screen and (min-width: 37.5em) {
-
 	.menu-toggle {
 		display: none;
 	}
@@ -87,9 +85,8 @@
 }
 
 .comment-navigation,
-.posts-navigation,
-.post-navigation {
-
+.post-navigation,
+.posts-navigation {
 	.site-main & {
 		margin: 0 0 1.5em;
 	}

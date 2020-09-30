@@ -1,0 +1,10 @@
+.site-title {
+  font-family: $font__branding;
+  font-size: 1.75rem;
+  font-weight: 400;
+
+  a {
+    text-decoration: none;
+    color: $primary-color;
+  }
+}

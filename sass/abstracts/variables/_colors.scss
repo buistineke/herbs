@@ -1,5 +1,6 @@
 //Primary Colors
 $primary-color: #000; // Black
+$primary-light: lighten($primary-color, 32.16);
 $brown-primary: #E19D49;
 $brown-dark: #CC8328;
 $purple-primary: #BCB8FD;
