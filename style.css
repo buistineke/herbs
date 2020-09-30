@@ -581,7 +581,7 @@ input[type=datetime],
 input[type=datetime-local],
 input[type=color],
 textarea {
-  color: #525252;
+  color: gray;
   border: 1px solid #525252;
   border-radius: 3px;
   padding: 3px;
@@ -662,7 +662,7 @@ textarea {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 0.75rem;
-  color: #525252;
+  color: gray;
   font-weight: 600;
   letter-spacing: 0.15em;
   margin-left: 1em;

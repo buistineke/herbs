@@ -1,6 +1,6 @@
 //Primary Colors
 $primary-color: #000; // Black
-$primary-light: lighten($primary-color, 32.16);
+$primary-light: lighten($primary-color, 50);
 $brown-primary: #E19D49;
 $brown-dark: #CC8328;
 $purple-primary: #BCB8FD;
@@ -16,7 +16,7 @@ $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
 
 $color__text-screen: #21759b; // screenreader text
-$color__text-input: lighten($primary-color, 32.16); // placeholder text -> textfields
+$color__text-input: lighten($primary-color, 50); // placeholder text -> textfields
 $color__text-input-focus: $primary-color; // input text -> text fields
 $color__link: $brown-primary;
 $color__link-visited: $brown-primary;
