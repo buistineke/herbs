@@ -6,24 +6,43 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Herbs
+ * @package HerbsHabitsHappiness
  */
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'herbs' ) ); ?>">
+	<footer class="site-footer">
+			<div class="site-info">
 				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'herbs' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'herbs' ), 'herbs', '<a href="http://www.inekebuist.com">Ineke Buist</a>' );
-				?>
+				the_custom_logo();
+				if ( is_front_page() && is_home() ) :
+					?>
+					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<?php
+				else :
+					?>
+					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<?php
+				endif; ?>
+			</div><!-- .site-info -->
+			<div class="footer-widget-area">
+					<?php dynamic_sidebar( 'footer-area-1' ); ?>
+					<?php dynamic_sidebar( 'footer-area-2' ); ?>
+					<?php dynamic_sidebar( 'footer-area-3' ); ?>
+					<?php dynamic_sidebar( 'footer-area-4' ); ?>
+			</div>
+			<div class="colophon">
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'herbs_theme' ) ); ?>">
+					<?php
+					/* translators: %s: CMS name, i.e. WordPress. */
+					printf( esc_html__( 'Proudly powered by %s', 'herbs_theme' ), 'WordPress' );
+					?>
+				</a>
+					<?php
+					/* translators: 1: Theme name, 2: Theme author. */
+					printf( esc_html__( 'Theme: %1$s by %2$s.', 'herbs_theme' ), 'herbs_theme', '<a href="http://www.herbshabitshappiness.com">Ineke Buist</a>' );
+					?>
+			</div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

@@ -22,9 +22,9 @@ Minimalist blog theme
 2. Click Upload Theme and Choose File, then select the theme's .zip file. Click Install Now.
 3. Click Activate to use your new theme right away.
 
-== Frequently Asked Questions ==
+### Frequently Asked Questions
 
-= Does this theme support any plugins? =
+# Does this theme support any plugins?
 
 Herbs includes support for WooCommerce and for Infinite Scroll in Jetpack.
 

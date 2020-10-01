@@ -1,0 +1,15 @@
+.colophon {
+  font-size: 0.7rem;
+  letter-spacing: 0.02em;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: lighten($primary-color, 30);
+  a, {
+    color: lighten($primary-color, 30);
+
+    &:hover:visited:focus:active {
+      color: lighten($primary-color, 30);
+    }
+  }
+
+}

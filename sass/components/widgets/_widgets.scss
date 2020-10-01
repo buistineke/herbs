@@ -1,8 +1,55 @@
 .widget {
 	margin: 0 0 1.5em;
+	font-size: 0.875rem;
 
 	// Make sure select elements fit in widgets.
 	select {
 		max-width: 100%;
 	}
+	// Widget Heading
+	h4 {
+		font-size: 0.75rem;
+		letter-spacing: 0.15em;
+		text-transform: uppercase;
+	}
+	// List without bullet
+	ul {
+		list-style-type: none;
+		padding-left: 0;
+		margin-left: 0;
+	}
+
+	// Links
+	a {
+		color: $primary-color;
+		text-decoration: none;
+	}
+}
+
+// Categories Widget
+
+.widget_categories {
+	ul {
+		li {
+			display: inline;
+		}
+		a {
+			color:#ffffff;
+			background-color: #000000;
+			margin-right: 0.5rem;
+			padding: 0.3rem;
+			font-size: 0.75rem;
+			font-weight: 600;
+			letter-spacing: 0.15em;
+			&:hover {
+				background-color: lighten($primary-color, 30);
+			}
+		}
+	}
+}
+
+// Search Forms
+
+.search-form {
+	display: flex;
 }

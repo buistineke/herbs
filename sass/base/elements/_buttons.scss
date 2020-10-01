@@ -2,13 +2,14 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid;
-	border-color: $color__border-button;
-	border-radius: 3px;
+	border: none;
 	background: $color__background-button;
-	color: rgba(0, 0, 0, 0.8);
+	color: white;
+	font-weight: 600;
+	font-size: 0.75em;
 	line-height: 1;
-	padding: 0.6em 1em 0.4em;
+	letter-spacing: 0.1em;
+	padding: 0.5em 1em 0.4em;
 
 	&:hover {
 		border-color: $color__border-button-hover;
@@ -16,6 +17,6 @@ input[type="submit"] {
 
 	&:active,
 	&:focus {
-		border-color: $color__border-button-focus;
+		background-color: $color__background-button;
 	}
 }

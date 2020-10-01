@@ -129,8 +129,52 @@ function herbs_widgets_init() {
 			'description'   => esc_html__( 'Add widgets here.', 'herbs' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
+			'before_title'  => '<h4 class="widget-title">',
+			'after_title'   => '</h4>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer Area 1', 'herbs' ),
+			'id'            => 'footer-area-1',
+			'description'   => esc_html__( 'Add widgets here.', 'herbs' ),
+			'before_widget' => '<div id="%1$s" class="widget footer-widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h4 class="widget-title">',
+			'after_title'   => '</h4>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer Area 2', 'herbs' ),
+			'id'            => 'footer-area-2',
+			'description'   => esc_html__( 'Add widgets here.', 'herbs' ),
+			'before_widget' => '<div id="%1$s" class="widget footer-widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h4 class="widget-title">',
+			'after_title'   => '</h4>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer Area 3', 'herbs' ),
+			'id'            => 'footer-area-3',
+			'description'   => esc_html__( 'Add widgets here.', 'herbs' ),
+			'before_widget' => '<div id="%1$s" class="widget footer-widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h4 class="widget-title">',
+			'after_title'   => '</h4>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer Area 4', 'herbs' ),
+			'id'            => 'footer-area-4',
+			'description'   => esc_html__( 'Add widgets here.', 'herbs' ),
+			'before_widget' => '<div id="%1$s" class="widget footer-widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h4 class="widget-title">',
+			'after_title'   => '</h4>',
 		)
 	);
 }
@@ -177,4 +221,3 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-

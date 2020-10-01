@@ -9,22 +9,22 @@ $beige: #F4EFE7;
 
 // Color settings
 $color__background-body: #fff;
-$color__background-screen: #f1f1f1;
-$color__background-hr: #ccc;
-$color__background-button: #e6e6e6;
-$color__background-pre: #eee;
+$color__background-screen: $beige;
+$color__background-hr: $beige;
+$color__background-button: $brown-primary;
+$color__background-pre: $beige;
 $color__background-ins: #fff9c0;
 
 $color__text-screen: #21759b; // screenreader text
-$color__text-input: lighten($primary-color, 50); // placeholder text -> textfields
+$color__text-input: lighten($primary-color, 30); // placeholder text -> textfields
 $color__text-input-focus: $primary-color; // input text -> text fields
 $color__link: $brown-primary;
 $color__link-visited: $brown-primary;
 $color__link-hover: $brown-dark;
 $color__text-main: $primary-color;
 
-$color__border-button: lighten(#000000, 32.16);
-$color__border-button-hover: lighten($primary-color, 32.16);
-$color__border-button-focus: lighten($primary-color, 32.16);
-$color__border-input: lighten($primary-color, 32.16);
-$color__border-abbr: lighten($primary-color, 32.16);
+$color__border-button: $brown-primary;
+$color__border-button-hover: $brown-dark;
+$color__border-button-focus: $primary-color;
+$color__border-input: lighten($primary-color, 30);
+$color__border-abbr: lighten($primary-color, 30);
