@@ -1,7 +1,5 @@
 ### Herbs
-
-Contributors: automattic
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+# A minimalist modern blog theme
 
 Requires at least: 4.5
 Tested up to: 5.4
@@ -10,11 +8,11 @@ Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
-A starter theme called Herbs.
-
 ### Description
 
-Minimalist blog theme
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+[....]
 
 ### Installation
 
@@ -26,12 +24,13 @@ Minimalist blog theme
 
 # Does this theme support any plugins?
 
-Herbs includes support for WooCommerce and for Infinite Scroll in Jetpack.
+Herbs includes support for:
+* WooCommerce
+* Infinite Scroll in Jetpack.
 
 #### Changelog
 
-= 1.0 - May 12 2015 =
-* Initial release
+[...]
 
 #### Credits
 
