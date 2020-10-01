@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #Herbs
 ### A minimalist modern blog theme
 
@@ -7,10 +6,6 @@
 A modern WordPress blog theme, based on the _S starter theme. (https://underscores.me/)
 
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
-=======
-### Herbs
-# A minimalist modern blog theme
->>>>>>> 419dde9076fd7f00614758b09669f07114a163c8
 
 #### Requirements
 
@@ -21,15 +16,7 @@ Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
-<<<<<<< HEAD
 ## Installation
-=======
-### Description
-
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
-
-[....]
->>>>>>> 419dde9076fd7f00614758b09669f07114a163c8
 
 First download the .ZIP file from this repository and log in to your Wordpress website.
 
