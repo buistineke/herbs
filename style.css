@@ -921,7 +921,7 @@ entry-title, .entry-title a {
   display: block;
 }
 
-/* Branding
+/* Header
 --------------------------------------------- */
 .site-title {
   font-family: "Nickainley";
@@ -947,6 +947,24 @@ entry-title, .entry-title a {
 }
 .colophon a:hover:visited:focus:active {
   color: #4d4d4d;
+}
+
+/* Footer
+--------------------------------------------- */
+.footer-widget-area {
+  display: grid;
+  grid-template: auto/1fr 1fr 1fr 1fr;
+  grid-gap: 2rem;
+}
+@media screen and (max-width: 992px) {
+  .footer-widget-area {
+    grid-template: 1fr 1fr/1fr 1fr;
+  }
+}
+@media screen and (max-width: 600px) {
+  .footer-widget-area {
+    display: flow-root;
+  }
 }
 
 /*--------------------------------------------------------------

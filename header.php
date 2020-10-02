@@ -36,13 +36,7 @@
 			else :
 				?>
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$herbs_description = get_bloginfo( 'description', 'display' );
-			if ( $herbs_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $herbs_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
+				<?php endif; ?>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">

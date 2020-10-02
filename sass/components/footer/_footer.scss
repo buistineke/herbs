@@ -1,0 +1,14 @@
+.footer-widget-area {
+  display: grid;
+  grid-template: auto / 1fr 1fr 1fr 1fr;
+  grid-gap: 2rem;
+
+  @media screen and (max-width: $break-large) {
+    grid-template: 1fr 1fr / 1fr 1fr;
+  }
+
+  @media screen and (max-width: $break-tablet) {
+    display: flow-root;
+  }
+
+}
