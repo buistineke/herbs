@@ -654,149 +654,108 @@ textarea {
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
-.no-sidebar .site {
+.no-sidebar {
   display: grid;
   grid-template-columns: auto;
-  grid-template-areas: "header" "main" "footer";
   grid-gap: 2rem;
   margin: auto;
   padding: 0 1.5rem 1.5rem;
   width: 80%;
 }
+.no-sidebar main {
+  width: 90%;
+}
 @media screen and (min-width: 1200px) {
-  .no-sidebar .site {
+  .no-sidebar {
     width: 75%;
   }
 }
 @media screen and (max-width: 1200px) {
-  .no-sidebar .site {
+  .no-sidebar {
     width: 90%;
   }
 }
 @media screen and (max-width: 768px) {
-  .no-sidebar .site {
+  .no-sidebar {
     width: 100%;
   }
 }
 
-.site {
+.content-sidebar {
   display: grid;
   grid-template-columns: auto 25%;
-  grid-template-areas: "header header" "main sidebar" "footer footer";
+  grid-template-areas: "content sidebar";
   grid-gap: 2rem;
   margin: auto;
   padding: 0 1.5rem 1.5rem;
   width: 80%;
 }
 @media screen and (min-width: 1200px) {
-  .site {
+  .content-sidebar {
     width: 75%;
   }
 }
 @media screen and (max-width: 1200px) {
-  .site {
+  .content-sidebar {
     width: 90%;
   }
 }
 @media screen and (max-width: 768px) {
-  .site {
+  .content-sidebar {
     grid-template-columns: auto;
-    grid-template-areas: "header" "main" "sidebar" "footer";
+    grid-template-areas: "content" "sidebar";
     width: 100%;
   }
-}
-
-.site-header {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: header;
-}
-
-.site > .site-header {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
 }
 
 .site-main {
-  -ms-grid-row: 3;
+  -ms-grid-row: 1;
   -ms-grid-column: 1;
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  grid-area: main;
+  grid-area: content;
   overflow: hidden;
   /* Resolves issue with <pre> elements forcing full width. */
 }
 
-.site > .site-main {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-}
-
 .widget-area {
-  -ms-grid-row: 3;
+  -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: sidebar;
 }
 
-.site-footer {
-  -ms-grid-row: 5;
-  -ms-grid-column: 1;
-  -ms-grid-row: 5;
-  -ms-grid-column: 1;
-  grid-area: footer;
-}
-
 @media screen and (max-width: 768px){
-  .site > .site-header {
+  .site-main {
     -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-  }
-  .site > .site-main {
-    -ms-grid-row: 3;
     -ms-grid-column: 1;
   }
   .widget-area {
-    -ms-grid-row: 5;
+    -ms-grid-row: 3;
     -ms-grid-column: 1;
-  }
-  .site > .site-footer {
-    -ms-grid-row: 7;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
   }
 }
 
-.site > .site-footer {
-  -ms-grid-row: 5;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-}
-
-.no-sidebar .site {
+.no-sidebar {
   display: grid;
   grid-template-columns: auto;
-  grid-template-areas: "header" "main" "footer";
   grid-gap: 2rem;
   margin: auto;
   padding: 0 1.5rem 1.5rem;
   width: 80%;
 }
+.no-sidebar main {
+  width: 90%;
+}
 @media screen and (min-width: 1200px) {
-  .no-sidebar .site {
+  .no-sidebar {
     width: 75%;
   }
 }
 @media screen and (max-width: 1200px) {
-  .no-sidebar .site {
+  .no-sidebar {
     width: 90%;
   }
 }
 @media screen and (max-width: 768px) {
-  .no-sidebar .site {
+  .no-sidebar {
     width: 100%;
   }
 }

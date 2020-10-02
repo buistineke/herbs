@@ -1,27 +1,37 @@
-.site {
+.sidebar-content {
 	display: grid;
-	grid-template-columns: ($size__site-sidebar) auto;
+	grid-template-columns: auto ($size__site-sidebar);
 	grid-template-areas:
-		"header header"
-		"sidebar main"
-		"footer footer";
-}
+		"sidebar content";
+	grid-gap: 2rem;
+	margin: auto;
+	padding: 0 1.5rem 1.5rem;
+	width: 80%;
 
-.site-header {
-	grid-area: header;
+	@media screen and (min-width: $break-xlarge){
+		width: 75%;
+	}
+
+	@media screen and (max-width: $break-xlarge){
+		width: 90%;
+	}
+
+	@media screen and (max-width: 768px) {
+		grid-template-columns: auto;
+		grid-template-areas:
+			"content"
+			"sidebar";
+			width: 100%;
+	}
 }
 
 .site-main {
-	grid-area: main;
+	grid-area: content;
 	overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
 }
 
 .widget-area {
 	grid-area: sidebar;
-}
-
-.site-footer {
-	grid-area: footer;
 }
 
 @import "no-sidebar";

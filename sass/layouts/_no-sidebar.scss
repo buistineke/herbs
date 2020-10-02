@@ -1,27 +1,22 @@
 .no-sidebar {
+	display: grid;
+	grid-template-columns: auto;
+	grid-gap: 2rem;
+	margin: auto;
+	padding: 0 1.5rem 1.5rem;
+	width: 80%;
 
-	.site {
-		display: grid;
-		grid-template-columns: auto;
-		grid-template-areas:
-			"header"
-			"main"
-			"footer";
-		grid-gap: 2rem;
-		margin: auto;
-		padding: 0 1.5rem 1.5rem;
-		width: 80%;
+	main {
+		width: 90%;
+	}
 
-		@media screen and (min-width: $break-xlarge){
-			width: 75%;
-		}
-
-		@media screen and (max-width: $break-xlarge){
-			width: 90%;
-		}
-
-		@media screen and (max-width: 768px) {
-		  width: 100%;
-		}
+	@media screen and (min-width: $break-xlarge) {
+		width: 75%;
+	}
+	@media screen and (max-width: $break-xlarge) {
+		width: 90%;
+	}
+	@media screen and (max-width: 768px) {
+		width: 100%;
 	}
 }
