@@ -654,6 +654,107 @@ textarea {
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
+.site {
+  display: grid;
+  grid-template-columns: auto 25%;
+  grid-template-areas: "header header" "main sidebar" "footer footer";
+  grid-gap: 2rem;
+  margin: auto;
+  padding: 0 1.5rem 1.5rem;
+  width: 80%;
+}
+@media screen and (min-width: 1200px) {
+  .site {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .site {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .site {
+    grid-template-areas: "header header" "main main" "sidebar sidebar" "footer footer";
+    width: 100%;
+  }
+}
+
+.site-header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: header;
+}
+
+.no-sidebar .site > .site-header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+}
+
+.site-main {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: main;
+  overflow: hidden;
+  /* Resolves issue with <pre> elements forcing full width. */
+}
+
+.no-sidebar .site > .site-main {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+}
+
+.widget-area {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: sidebar;
+}
+
+.site-footer {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: footer;
+}
+
+.no-sidebar .site > .site-footer {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+}
+
+@media screen and (max-width: 768px){
+  .site-header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+  .site-main {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+  .widget-area {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+  .site-footer {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+}
+
+.no-sidebar .site {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas: "header" "main" "footer";
+}
+
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
@@ -790,6 +891,22 @@ entry-title, .entry-title a {
 
 .bypostauthor {
   display: block;
+}
+
+.comment-form label {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #4d4d4d;
+}
+
+.comment-form-cookies-consent label, .comment-notes {
+  display: inline;
+  font-size: 0.75rem;
+  text-transform: none;
+  letter-spacing: 0.05em;
 }
 
 /* Widgets
@@ -933,22 +1050,6 @@ entry-title, .entry-title a {
   color: #000;
 }
 
-/* Colophon
---------------------------------------------- */
-.colophon {
-  font-size: 0.7rem;
-  letter-spacing: 0.02em;
-  text-align: center;
-  margin-bottom: 2rem;
-  color: #4d4d4d;
-}
-.colophon a {
-  color: #4d4d4d;
-}
-.colophon a:hover:visited:focus:active {
-  color: #4d4d4d;
-}
-
 /* Footer
 --------------------------------------------- */
 .footer-widget-area {
@@ -965,6 +1066,20 @@ entry-title, .entry-title a {
   .footer-widget-area {
     display: flow-root;
   }
+}
+
+.colophon {
+  font-size: 0.7rem;
+  letter-spacing: 0.02em;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #4d4d4d;
+}
+.colophon a {
+  color: #4d4d4d;
+}
+.colophon a:hover:visited:focus:active {
+  color: #4d4d4d;
 }
 
 /*--------------------------------------------------------------

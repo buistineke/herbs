@@ -5,6 +5,27 @@
 		"header header"
 		"main sidebar"
 		"footer footer";
+	grid-gap: 2rem;
+	margin: auto;
+	padding: 0 1.5rem 1.5rem;
+	width: 80%;
+
+	@media screen and (min-width: $break-xlarge){
+		width: 75%;
+	}
+
+	@media screen and (max-width: $break-xlarge){
+		width: 90%;
+	}
+
+	@media screen and (max-width: 768px) {
+		grid-template-areas:
+			"header header"
+			"main main"
+			"sidebar sidebar"
+			"footer footer";
+			width: 100%;
+	}
 }
 
 .site-header {
