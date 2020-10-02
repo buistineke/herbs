@@ -19,11 +19,12 @@
 	}
 
 	@media screen and (max-width: 768px) {
+		grid-template-columns: auto;
 		grid-template-areas:
-			"header header"
-			"main main"
-			"sidebar sidebar"
-			"footer footer";
+			"header"
+			"main"
+			"sidebar"
+			"footer";
 			width: 100%;
 	}
 }
