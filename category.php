@@ -1,11 +1,6 @@
 <?php
 /**
- * The main template file
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
+ * The category template file
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -15,8 +10,12 @@
 get_header();
 ?>
 
-<div class="site-index">
-	<h1 class="entry-title"><?php single_cat_title( __( '', 'textdomain' ) ); ?></h1>
+<div class="grid">
+	<div class="cat-head">
+		<span class="cat-tag">Category</span>
+		<h1 class="entry-title"><?php single_cat_title( __( '', 'textdomain' ) ); ?></h1>
+	</div>
+
 	<main id="primary">
 		<?php
 		if ( have_posts() ) :
@@ -40,9 +39,10 @@ get_header();
 				 */
 				get_template_part( 'template-parts/content-index', get_post_type() );
 
-			endwhile;
+			endwhile; ?>
+		</main>
 
-			the_posts_navigation();
+		<?php	the_posts_navigation();
 
 		else :
 
@@ -50,7 +50,5 @@ get_header();
 
 		endif;
 		?>
-
-	</main><!-- #main -->
 </div>
 <?php get_footer();?>

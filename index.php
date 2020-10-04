@@ -15,7 +15,7 @@
 get_header();
 ?>
 
-<div class="site-index">
+<div class="grid">
 	<main id="primary">
 
 		<?php
@@ -40,9 +40,10 @@ get_header();
 				 */
 				get_template_part( 'template-parts/content-index', get_post_type() );
 
-			endwhile;
+			endwhile; ?>
+		</main>
 
-			the_posts_navigation();
+		<?php	the_posts_navigation();
 
 		else :
 
@@ -50,7 +51,5 @@ get_header();
 
 		endif;
 		?>
-
-	</main><!-- #main -->
 </div>
 <?php get_footer();?>

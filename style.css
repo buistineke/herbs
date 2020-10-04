@@ -654,30 +654,25 @@ textarea {
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
-.site-index {
+.grid {
   width: 80%;
   margin: auto;
 }
-.site-index main {
+.grid main {
   display: grid;
   grid-template: 1fr/1fr 1fr 1fr;
   grid-gap: 2rem;
 }
-.site-index main article {
+.grid main article {
   text-align: center;
   width: 100%;
   background-color: white;
+  transition: 0.25s all ease-in-out;
 }
-.site-index main article:hover {
-  background-color: white;
-}
-.site-index main article:hover img {
-  transform: scale(1.05);
-}
-.site-index main article h2 {
+.grid main article h2 {
   margin: 0.5rem 0;
 }
-.site-index main article .post-thumbnail {
+.grid main article .post-thumbnail {
   position: relative;
   display: flex;
   justify-content: center;
@@ -686,37 +681,43 @@ textarea {
   height: 275px;
   margin: 0 0 1rem 0;
 }
-.site-index main article .post-thumbnail img {
+.grid main article .post-thumbnail img {
   transition: 0.25s all ease-in-out;
   min-width: 100%;
   min-height: 100%;
 }
+.grid main article:hover img {
+  transform: scale(1.05);
+}
+.grid main article:hover h2 {
+  text-decoration: underline;
+}
 @media screen and (min-width: 1200px) {
-  .site-index {
+  .grid {
     width: 80%;
   }
 }
 @media screen and (max-width: 1199px) {
-  .site-index {
+  .grid {
     width: 80%;
   }
 }
 @media screen and (max-width: 992px) {
-  .site-index main {
+  .grid main {
     grid-template: 1fr/1fr 1fr;
   }
-  .site-index main article .post-thumbnail {
+  .grid main article .post-thumbnail {
     height: 220px;
   }
 }
 @media screen and (max-width: 768px) {
-  .site-index {
+  .grid {
     width: 90%;
   }
-  .site-index main {
+  .grid main {
     display: flow-root;
   }
-  .site-index main article .post-thumbnail {
+  .grid main article .post-thumbnail {
     height: 275px;
   }
 }
@@ -961,7 +962,7 @@ textarea {
   text-align: center;
 }
 
-.entry-footer .cat-links a {
+.entry-footer .cat-links a, .entry-footer .edit-link a {
   color: #ffffff;
   background-color: #000000;
   margin-right: 0.3rem;
@@ -973,8 +974,33 @@ textarea {
   text-transform: capitalize;
   transition: 0.25s all ease-in-out;
 }
-.entry-footer .cat-links a:hover {
+.entry-footer .cat-links a:hover, .entry-footer .edit-link a:hover {
   background-color: #4d4d4d;
+}
+.entry-footer .edit-link a {
+  background-color: #BCB8FD;
+  color: #000;
+  transition: 0.25s all ease-in-out;
+}
+.entry-footer .edit-link a:hover {
+  background-color: #7069BC;
+}
+
+.cat-head {
+  text-align: center;
+}
+.cat-head span {
+  padding: 0.3rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  line-height: 2rem;
+  text-transform: capitalize;
+  background-color: #000;
+  color: white;
+}
+.cat-head h1 {
+  margin-top: 0;
 }
 
 /* Comments
