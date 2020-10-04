@@ -12,6 +12,7 @@
 ?>
 
 	<footer class="site-footer">
+		<div class="container">
 			<div class="site-info">
 				<?php
 				the_custom_logo();
@@ -42,9 +43,9 @@
 					/* translators: 1: Theme name, 2: Theme author. */
 					printf( esc_html__( 'Theme: %1$s by %2$s.', 'herbs_theme' ), 'herbs_theme', '<a href="http://www.herbshabitshappiness.com">Ineke Buist</a>' );
 					?>
-			</div>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+			</div><!-- #colophon -->
+		</div>
+	</footer>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

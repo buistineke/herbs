@@ -93,6 +93,12 @@
 
 	.nav-links {
 		display: flex;
+		a {
+			font-size: 0.75rem;
+			color: $purple-dark;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
 	}
 
 	.nav-previous {

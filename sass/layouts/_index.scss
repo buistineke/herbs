@@ -1,32 +1,37 @@
 .site-index {
   width: 80%;
   margin: auto;
+
   main {
     display: grid;
     grid-template: 1fr / 1fr 1fr 1fr;
     grid-gap: 2rem;
 
     article {
+      text-align: center;
       width: 100%;
 
       .post-thumbnail {
-        display: block;
-        height: 275px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         overflow: hidden;
+        height: 275px;
+        margin: 0 0 1rem 0;
 
         img {
-          object-fit: cover;
+          flex-shrink: 0;
+          min-width: 100%;
+          min-height: 100%;
         }
       }
 
       h2 {
-        text-align: center;
+        margin: 0.5rem 0;
       }
-
+    }
   }
-
-  }
-
   @media screen and (min-width: $break-xlarge) {
     width: 80%;
   }
@@ -36,11 +41,25 @@
   @media screen and (max-width: $break-large) {
     main {
       grid-template: 1fr / 1fr 1fr;
+
+      article {
+        .post-thumbnail {
+          height: 220px;
+        }
+      }
     }
   }
   @media screen and (max-width: 768px) {
+    width: 90%;
+
     main {
-      grid-template: 1fr / 1fr;
+      display: flow-root;
+
+      article {
+        .post-thumbnail {
+          height: 275px;
+        }
+      }
     }
   }
 }

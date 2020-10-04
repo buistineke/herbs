@@ -664,18 +664,25 @@ textarea {
   grid-gap: 2rem;
 }
 .site-index main article {
+  text-align: center;
   width: 100%;
 }
 .site-index main article .post-thumbnail {
-  display: block;
-  height: 275px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
+  height: 275px;
+  margin: 0 0 1rem 0;
 }
 .site-index main article .post-thumbnail img {
-  object-fit: cover;
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
 .site-index main article h2 {
-  text-align: center;
+  margin: 0.5rem 0;
 }
 @media screen and (min-width: 1200px) {
   .site-index {
@@ -691,10 +698,19 @@ textarea {
   .site-index main {
     grid-template: 1fr/1fr 1fr;
   }
+  .site-index main article .post-thumbnail {
+    height: 220px;
+  }
 }
 @media screen and (max-width: 768px) {
+  .site-index {
+    width: 90%;
+  }
   .site-index main {
-    grid-template: 1fr/1fr;
+    display: flow-root;
+  }
+  .site-index main article .post-thumbnail {
+    height: 275px;
   }
 }
 
@@ -874,6 +890,14 @@ textarea {
 .posts-navigation .nav-links {
   display: flex;
 }
+.comment-navigation .nav-links a,
+.post-navigation .nav-links a,
+.posts-navigation .nav-links a {
+  font-size: 0.75rem;
+  color: #7069BC;
+  text-transform: uppercase;
+  font-weight: bold;
+}
 .comment-navigation .nav-previous,
 .post-navigation .nav-previous,
 .posts-navigation .nav-previous {
@@ -912,17 +936,19 @@ textarea {
   margin: 0 0 1.5em;
 }
 
-entry-title, .entry-title a {
+.entry-title, .entry-title a {
+  text-align: center;
   letter-spacing: 0.15rem;
   color: #000;
 }
 
 .entry-meta, .entry-meta a, .cat-links, .cat-links a, .comments-link {
-  color: #7069BC;
+  color: #666666;
   font-size: 0.625rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.15em;
+  text-align: center;
 }
 
 /* Comments
@@ -1086,9 +1112,20 @@ entry-title, .entry-title a {
 
 /* Header
 --------------------------------------------- */
+.site-header {
+  display: none;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+}
+.site-header div {
+  width: 95%;
+  margin: auto;
+}
+
 .site-title {
   font-family: "Nickainley";
-  font-size: 1.75rem;
+  font-size: 2rem;
   font-weight: 400;
 }
 .site-title a {
@@ -1098,18 +1135,22 @@ entry-title, .entry-title a {
 
 /* Footer
 --------------------------------------------- */
-.footer-widget-area {
+footer div {
+  width: 95%;
+  margin: auto;
+}
+footer .footer-widget-area {
   display: grid;
   grid-template: auto/1fr 1fr 1fr 1fr;
   grid-gap: 2rem;
 }
 @media screen and (max-width: 992px) {
-  .footer-widget-area {
+  footer .footer-widget-area {
     grid-template: 1fr 1fr/1fr 1fr;
   }
 }
 @media screen and (max-width: 600px) {
-  .footer-widget-area {
+  footer .footer-widget-area {
     display: flow-root;
   }
 }
