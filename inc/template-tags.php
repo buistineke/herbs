@@ -60,14 +60,14 @@ if ( ! function_exists( 'herbs_entry_footer' ) ) :
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', 'herbs' ) );
+			$categories_list = get_the_category_list( esc_html__( ' ', 'herbs' ) );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( '%1$s', 'herbs' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				printf( '<span class="cat-links">' . esc_html__('%1$s', 'herbs' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
 
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'herbs' ) );
+			$tags_list = get_the_tag_list( '', esc_html_x( ' ', 'list item separator', 'herbs' ) );
 			if ( $tags_list ) {
 				/* translators: 1: list of tags. */
 				printf( '<span class="tags-links">' . esc_html__( 'Tags: %1$s', 'herbs' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
@@ -75,7 +75,7 @@ if ( ! function_exists( 'herbs_entry_footer' ) ) :
 		}
 
 		/* Uncomment if you want to print a "Leave a comment link in the homepaga with each post"
-		
+
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 			echo '<span class="comments-link">';
 			comments_popup_link(

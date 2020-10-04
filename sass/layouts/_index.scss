@@ -10,6 +10,17 @@
     article {
       text-align: center;
       width: 100%;
+      background-color: $white;
+      &:hover {
+        background-color: lighten($purple-primary, 70);
+        img {
+          transform: scale(1.05);
+        }
+      }
+
+      h2 {
+        margin: 0.5rem 0;
+      }
 
       .post-thumbnail {
         position: relative;
@@ -21,14 +32,10 @@
         margin: 0 0 1rem 0;
 
         img {
-          flex-shrink: 0;
+          @include transition;
           min-width: 100%;
           min-height: 100%;
         }
-      }
-
-      h2 {
-        margin: 0.5rem 0;
       }
     }
   }

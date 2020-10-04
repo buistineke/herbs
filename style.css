@@ -666,6 +666,16 @@ textarea {
 .site-index main article {
   text-align: center;
   width: 100%;
+  background-color: white;
+}
+.site-index main article:hover {
+  background-color: white;
+}
+.site-index main article:hover img {
+  transform: scale(1.05);
+}
+.site-index main article h2 {
+  margin: 0.5rem 0;
 }
 .site-index main article .post-thumbnail {
   position: relative;
@@ -677,12 +687,9 @@ textarea {
   margin: 0 0 1rem 0;
 }
 .site-index main article .post-thumbnail img {
-  flex-shrink: 0;
+  transition: 0.25s all ease-in-out;
   min-width: 100%;
   min-height: 100%;
-}
-.site-index main article h2 {
-  margin: 0.5rem 0;
 }
 @media screen and (min-width: 1200px) {
   .site-index {
@@ -883,7 +890,7 @@ textarea {
 .site-main .comment-navigation,
 .site-main .post-navigation,
 .site-main .posts-navigation {
-  margin: 0 0 1.5em;
+  margin: 1.5em 0;
 }
 .comment-navigation .nav-links,
 .post-navigation .nav-links,
@@ -916,18 +923,18 @@ textarea {
   display: block;
 }
 
-.post,
-.page {
-  margin: 0 0 1.5em;
+.page,
+.post {
+  margin: 0;
 }
 
 .updated:not(.published) {
   display: none;
 }
 
-.page-content,
 .entry-content,
-.entry-summary {
+.entry-summary,
+.page-content {
   margin: 1.5em 0 0;
 }
 
@@ -936,19 +943,38 @@ textarea {
   margin: 0 0 1.5em;
 }
 
-.entry-title, .entry-title a {
+.entry-title,
+.entry-title a {
   text-align: center;
   letter-spacing: 0.15rem;
   color: #000;
 }
 
-.entry-meta, .entry-meta a, .cat-links, .cat-links a, .comments-link {
+.comments-link,
+.entry-meta,
+.entry-meta a {
   color: #666666;
   font-size: 0.625rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   text-align: center;
+}
+
+.entry-footer .cat-links a {
+  color: #ffffff;
+  background-color: #000000;
+  margin-right: 0.3rem;
+  padding: 0.3rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  line-height: 2rem;
+  text-transform: capitalize;
+  transition: 0.25s all ease-in-out;
+}
+.entry-footer .cat-links a:hover {
+  background-color: #4d4d4d;
 }
 
 /* Comments
@@ -1016,6 +1042,8 @@ textarea {
   font-weight: 600;
   letter-spacing: 0.15em;
   line-height: 2rem;
+  text-transform: capitalize;
+  transition: 0.25s all ease-in-out;
 }
 .widget_categories ul a:hover {
   background-color: #4d4d4d;
@@ -1049,8 +1077,7 @@ textarea {
 }
 .wp-caption img[class*=wp-image-] {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 .wp-caption .wp-caption-text {
   margin: 0.8075em 0;
@@ -1113,8 +1140,6 @@ textarea {
 /* Header
 --------------------------------------------- */
 .site-header {
-  display: none;
-  position: fixed;
   width: 100%;
   background-color: white;
 }
@@ -1251,7 +1276,6 @@ footer .footer-widget-area {
 .aligncenter {
   clear: both;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   margin-bottom: 1.5em;
 }

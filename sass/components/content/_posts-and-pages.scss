@@ -2,18 +2,18 @@
 	display: block;
 }
 
-.post,
-.page {
-	margin: 0 0 1.5em;
+.page,
+.post {
+	margin: 0;
 }
 
 .updated:not(.published) {
 	display: none;
 }
 
-.page-content,
 .entry-content,
-.entry-summary {
+.entry-summary,
+.page-content {
 	margin: 1.5em 0 0;
 }
 
@@ -22,17 +22,28 @@
 	margin: 0 0 1.5em;
 }
 
-.entry-title, .entry-title a {
+.entry-title,
+.entry-title a {
 	text-align: center;
 	letter-spacing: 0.15rem;
 	color: #000;
 }
 
-.entry-meta, .entry-meta a, .cat-links, .cat-links a, .comments-link {
+.comments-link,
+.entry-meta,
+.entry-meta a {
 	color: lighten($primary-color, 40);
 	font-size: 0.625rem;
 	font-weight: 600;
 	text-transform: uppercase;
 	letter-spacing: 0.15em;
 	text-align: center;
+}
+
+.entry-footer {
+	.cat-links {
+		a {
+			@include cat-link;
+		}
+	}
 }

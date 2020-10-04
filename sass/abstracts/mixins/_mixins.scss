@@ -1,11 +1,34 @@
 // Center block
 @mixin center-block {
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0 auto;
 }
 
 // Column width with margin
 @mixin column-width($numberColumns: 3) {
-	width: map-get($columns, $numberColumns) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
+	width: map-get($columns, $numberColumns) - (($columns__margin * ($numberColumns - 1)) / $numberColumns);
+}
+
+// Transitions
+@mixin transition {
+	-webkit-transition: 0.25s all ease-in-out;
+	-moz-transition: 0.25s all ease-in-out;
+	-o-transition: 0.25s all ease-in-out;
+	transition: 0.25s all ease-in-out;
+}
+
+@mixin cat-link {
+	color: #ffffff;
+	background-color: #000000;
+	margin-right: 0.3rem;
+	padding: 0.3rem;
+	font-size: 0.75rem;
+	font-weight: 600;
+	letter-spacing: 0.15em;
+	line-height: 2rem;
+	text-transform: capitalize;
+	@include transition;
+	&:hover {
+		background-color: lighten($primary-color, 30);
+	}
 }
