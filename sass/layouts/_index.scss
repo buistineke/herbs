@@ -1,0 +1,46 @@
+.site-index {
+  width: 80%;
+  margin: auto;
+  main {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr;
+    grid-gap: 2rem;
+
+    article {
+      width: 100%;
+
+      .post-thumbnail {
+        display: block;
+        height: 275px;
+        overflow: hidden;
+
+        img {
+          object-fit: cover;
+        }
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+  }
+
+  }
+
+  @media screen and (min-width: $break-xlarge) {
+    width: 80%;
+  }
+  @media screen and (max-width: $break-xlarge - 1) {
+    width: 80%;
+  }
+  @media screen and (max-width: $break-large) {
+    main {
+      grid-template: 1fr / 1fr 1fr;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    main {
+      grid-template: 1fr / 1fr;
+    }
+  }
+}

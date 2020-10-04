@@ -654,10 +654,51 @@ textarea {
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
-.no-sidebar {
+.site-index {
+  width: 80%;
+  margin: auto;
+}
+.site-index main {
   display: grid;
-  grid-template-columns: auto;
+  grid-template: 1fr/1fr 1fr 1fr;
   grid-gap: 2rem;
+}
+.site-index main article {
+  width: 100%;
+}
+.site-index main article .post-thumbnail {
+  display: block;
+  height: 275px;
+  overflow: hidden;
+}
+.site-index main article .post-thumbnail img {
+  object-fit: cover;
+}
+.site-index main article h2 {
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .site-index {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .site-index {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .site-index main {
+    grid-template: 1fr/1fr 1fr;
+  }
+}
+@media screen and (max-width: 768px) {
+  .site-index main {
+    grid-template: 1fr/1fr;
+  }
+}
+
+.no-sidebar {
   margin: auto;
   padding: 0 1.5rem 1.5rem;
   width: 80%;
@@ -734,9 +775,6 @@ textarea {
 }
 
 .no-sidebar {
-  display: grid;
-  grid-template-columns: auto;
-  grid-gap: 2rem;
   margin: auto;
   padding: 0 1.5rem 1.5rem;
   width: 80%;
@@ -876,7 +914,6 @@ textarea {
 
 entry-title, .entry-title a {
   letter-spacing: 0.15rem;
-  line-height: 2;
   color: #000;
 }
 
@@ -936,6 +973,9 @@ entry-title, .entry-title a {
 .widget a {
   color: #000;
   text-decoration: none;
+}
+.widget input[type=search-field] {
+  width: 60px;
 }
 
 .widget_categories ul li {

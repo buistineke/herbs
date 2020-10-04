@@ -24,6 +24,11 @@
 		color: $primary-color;
 		text-decoration: none;
 	}
+
+	// Search Field
+	input[type="search-field"] {
+		width: 60px;
+	}
 }
 
 // Categories Widget
