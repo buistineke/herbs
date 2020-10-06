@@ -88,25 +88,39 @@
 .post-navigation,
 .posts-navigation {
 	.site-main & {
-		margin: 1.5em 0;
+		margin: 3em 0;
 	}
 
 	.nav-links {
 		display: flex;
 		a {
 			font-size: 0.75rem;
-			color: $purple-dark;
+			color: $primary-color;
 			text-transform: uppercase;
 			font-weight: bold;
+			display: flex;
+      flex-direction: column;
+			&:hover {
+				@include transition;
+			}
+			svg {
+				margin-bottom: 0.5rem;
+			}
 		}
 	}
 
 	.nav-previous {
 		flex: 1 0 50%;
+		a {
+			align-items: flex-start;
+		}
 	}
 
 	.nav-next {
 		text-align: end;
 		flex: 1 0 50%;
+		a {
+			align-items: flex-end;
+		}
 	}
 }

@@ -24,3 +24,45 @@
 	text-transform: none;
 	letter-spacing: 0.05em;
 }
+
+
+.comments-area {
+	ol {
+		list-style-type: none;
+		margin-left: 0;
+		padding-left: 0;
+		ol {
+			padding-left: 2rem;
+		}
+		article { // Comment around each box
+			background-color: lighten($beige, 4);
+			margin-bottom: 1rem;
+			padding: 1rem;
+		}
+	}
+}
+
+.comment-meta {
+	display: flex;
+	align-items: baseline;
+	.comment-author {
+		display: flex;
+		align-items: center;
+		b {
+			margin-right: 0.5rem;
+		}
+		img {
+			margin-right: 0.5rem;
+			background-color: white;
+		}
+	}
+	.comment-metadata {
+		text-align: right;
+		text-transform: uppercase;
+		font-size: 0.75rem;
+		font-weight: 600;
+		a {
+		  color: lighten($primary-color, 30);
+	  }
+	}
+}

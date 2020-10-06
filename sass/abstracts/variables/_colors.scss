@@ -1,8 +1,7 @@
 //Primary Colors
 $primary-color: #000; // Black
 $primary-light: lighten($primary-color, 50);
-$brown-primary: #E19D49;
-$brown-dark: #CC8328;
+$brown-primary: #CC8328;
 $purple-primary: #BCB8FD;
 $purple-dark: #7069BC;
 $beige: #F4EFE7;
@@ -21,11 +20,11 @@ $color__text-input: lighten($primary-color, 30); // placeholder text -> textfiel
 $color__text-input-focus: $primary-color; // input text -> text fields
 $color__link: $brown-primary;
 $color__link-visited: $brown-primary;
-$color__link-hover: $brown-dark;
+$color__link-hover: darken($brown-primary, 3);
 $color__text-main: $primary-color;
 
 $color__border-button: $brown-primary;
-$color__border-button-hover: $brown-dark;
+$color__border-button-hover: darken($brown-primary, 3);
 $color__border-button-focus: $primary-color;
 $color__border-input: lighten($primary-color, 30);
 $color__border-abbr: lighten($primary-color, 30);
