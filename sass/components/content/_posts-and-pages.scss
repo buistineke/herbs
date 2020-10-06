@@ -41,19 +41,16 @@
 }
 
 .entry-footer {
-	.cat-links, .edit-link {
+	.cat-links {
 		a {
-			@include cat-link;
+			@include block-link;
 		}
 	}
-	.edit-link a {
-		background-color: $purple-primary;
-		color: $primary-color;
-		@include transition;
-		&:hover {
-			background-color: $purple-dark;
+	.edit-link {
+		a {
+			@include outline-block-link;
 		}
-		}
+	}
 }
 
 .cat-head {

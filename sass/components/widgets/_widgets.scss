@@ -39,7 +39,7 @@
 			display: inline;
 		}
 		a {
-			@include cat-link;
+			@include block-link;
 		}
 	}
 }

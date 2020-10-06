@@ -42,6 +42,45 @@
 	}
 }
 
+.comment-reply-link {
+	@include outline-block-link;
+}
+
+.comment-respond {
+	background-color: $beige;
+	padding: 2rem;
+	h3 { // #reply title
+		margin-top: 0;
+	}
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	input[type="password"],
+	input[type="search"],
+	input[type="number"],
+	input[type="tel"],
+	input[type="range"],
+	input[type="date"],
+	input[type="month"],
+	input[type="week"],
+	input[type="time"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="color"],
+	textarea {
+		color: $color__text-input;
+		border: none;
+		padding: 4px;
+		background: $white;
+		&:focus {
+			color: $color__text-input-focus;
+		}
+	}
+	.form-submit {
+		margin-bottom: 0;
+	}
+}
+
 .comment-meta {
 	display: flex;
 	align-items: baseline;

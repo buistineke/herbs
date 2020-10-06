@@ -983,9 +983,9 @@ textarea {
   text-align: center;
 }
 
-.entry-footer .cat-links a, .entry-footer .edit-link a {
-  color: #ffffff;
-  background-color: #000000;
+.entry-footer .cat-links a {
+  color: white;
+  background-color: #000;
   margin-right: 0.3rem;
   padding: 0.3rem;
   font-size: 0.75rem;
@@ -995,16 +995,26 @@ textarea {
   text-transform: capitalize;
   transition: 0.25s all ease-in-out;
 }
-.entry-footer .cat-links a:hover, .entry-footer .edit-link a:hover {
+.entry-footer .cat-links a:hover {
   background-color: #4d4d4d;
+  text-decoration: none;
 }
 .entry-footer .edit-link a {
-  background-color: #BCB8FD;
   color: #000;
+  border: 2px solid #000;
+  margin-right: 0.3rem;
+  padding: 0.3rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  line-height: 2rem;
+  text-transform: capitalize;
   transition: 0.25s all ease-in-out;
 }
 .entry-footer .edit-link a:hover {
-  background-color: #7069BC;
+  color: white;
+  background-color: #000;
+  text-decoration: none;
 }
 
 .cat-head {
@@ -1064,6 +1074,74 @@ textarea {
   padding: 1rem;
 }
 
+.comment-reply-link {
+  color: #000;
+  border: 2px solid #000;
+  margin-right: 0.3rem;
+  padding: 0.3rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  line-height: 2rem;
+  text-transform: capitalize;
+  transition: 0.25s all ease-in-out;
+}
+.comment-reply-link:hover {
+  color: white;
+  background-color: #000;
+  text-decoration: none;
+}
+
+.comment-respond {
+  background-color: #F4EFE7;
+  padding: 2rem;
+}
+.comment-respond h3 {
+  margin-top: 0;
+}
+.comment-respond input[type=text],
+.comment-respond input[type=email],
+.comment-respond input[type=url],
+.comment-respond input[type=password],
+.comment-respond input[type=search],
+.comment-respond input[type=number],
+.comment-respond input[type=tel],
+.comment-respond input[type=range],
+.comment-respond input[type=date],
+.comment-respond input[type=month],
+.comment-respond input[type=week],
+.comment-respond input[type=time],
+.comment-respond input[type=datetime],
+.comment-respond input[type=datetime-local],
+.comment-respond input[type=color],
+.comment-respond textarea {
+  color: #4d4d4d;
+  border: none;
+  padding: 4px;
+  background: white;
+}
+.comment-respond input[type=text]:focus,
+.comment-respond input[type=email]:focus,
+.comment-respond input[type=url]:focus,
+.comment-respond input[type=password]:focus,
+.comment-respond input[type=search]:focus,
+.comment-respond input[type=number]:focus,
+.comment-respond input[type=tel]:focus,
+.comment-respond input[type=range]:focus,
+.comment-respond input[type=date]:focus,
+.comment-respond input[type=month]:focus,
+.comment-respond input[type=week]:focus,
+.comment-respond input[type=time]:focus,
+.comment-respond input[type=datetime]:focus,
+.comment-respond input[type=datetime-local]:focus,
+.comment-respond input[type=color]:focus,
+.comment-respond textarea:focus {
+  color: #000;
+}
+.comment-respond .form-submit {
+  margin-bottom: 0;
+}
+
 .comment-meta {
   display: flex;
   align-items: baseline;
@@ -1120,8 +1198,8 @@ textarea {
   display: inline;
 }
 .widget_categories ul a {
-  color: #ffffff;
-  background-color: #000000;
+  color: white;
+  background-color: #000;
   margin-right: 0.3rem;
   padding: 0.3rem;
   font-size: 0.75rem;
@@ -1133,6 +1211,7 @@ textarea {
 }
 .widget_categories ul a:hover {
   background-color: #4d4d4d;
+  text-decoration: none;
 }
 
 .search-form {
