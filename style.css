@@ -409,6 +409,13 @@ p {
   margin-bottom: 1.5em;
 }
 
+figcaption {
+  text-align: center;
+  font-size: 0.875rem;
+  font-style: italic;
+  color: #666666;
+}
+
 dfn,
 cite,
 em,
@@ -650,6 +657,15 @@ textarea {
   width: 100%;
 }
 
+label {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #4d4d4d;
+}
+
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
@@ -837,6 +853,7 @@ textarea {
   padding-left: 0;
 }
 .main-navigation ul ul {
+  background-color: white;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   float: left;
   position: absolute;
@@ -1042,15 +1059,6 @@ textarea {
 
 .bypostauthor {
   display: block;
-}
-
-.comment-form label {
-  display: block;
-  font-size: 0.75rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  font-weight: 600;
-  color: #4d4d4d;
 }
 
 .comment-form-cookies-consent label, .comment-notes {

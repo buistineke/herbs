@@ -133,6 +133,7 @@ if ( ! function_exists( 'herbs_post_thumbnail' ) ) :
 
 			<div class="post-thumbnail">
 				<?php the_post_thumbnail(); ?>
+				<figcaption><?php the_post_thumbnail_caption();?></figcaption>
 			</div><!-- .post-thumbnail -->
 
 		<?php else : ?>

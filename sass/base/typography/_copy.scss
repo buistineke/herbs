@@ -2,6 +2,13 @@ p {
 	margin-bottom: 1.5em;
 }
 
+figcaption {
+	text-align: center;
+	font-size: 0.875rem;
+	font-style: italic;
+	color: lighten($primary-color, 40%);
+}
+
 dfn,
 cite,
 em,
