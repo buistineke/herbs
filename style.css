@@ -1226,6 +1226,29 @@ label {
   display: flex;
 }
 
+.widget_recent_entries ul li {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+.widget_recent_entries ul li a {
+  order: 2;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  font-size: 0.875rem;
+}
+.widget_recent_entries ul li a:hover {
+  text-decoration: underline;
+}
+.widget_recent_entries ul li span {
+  order: 1;
+  color: #666666;
+  font-size: 0.625rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
 /* Media
 --------------------------------------------- */
 .page-content .wp-smiley,
